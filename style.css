@@ -10,10 +10,24 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('PICVANYELIE.jpg') no-repeat center center/cover;
+    background-image: url('PICVANYELIE.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* This is the 'magic' property for responsiveness */
+    background-attachment: fixed;
     position: relative;
 }
-
+@media (max-width: 600px) {
+    body {
+        /* On mobile, 'fixed' attachment can sometimes cause glitches. 
+           This ensures it stays smooth. */
+        background-attachment: scroll; 
+        
+        /* Optional: If the couple is off-center in the photo, 
+           change 50% to adjust horizontal focus */
+        background-position: 50% center; 
+    }
+}
 .hero-overlay {
     height: 100%;
     width: 100%;
@@ -135,4 +149,5 @@ button:hover {
     font-weight: bold;
 
 }
+
 
