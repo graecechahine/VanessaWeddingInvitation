@@ -10,7 +10,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: 'PICVANYELIE.jpg' no-repeat center center/cover;
+    background: url('PICVANYELIE.jpg') no-repeat center center/cover;
     position: relative;
 }
 
@@ -135,3 +135,4 @@ button:hover {
     font-weight: bold;
 
 }
+
