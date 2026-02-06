@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body background="C:\Users\Y520\Desktop\Wedding invitation\PICVANYELIE.jpg" no-repeat center center/cover>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h2 class="subtitle">Save the Date</h2>
+                <h1>Elie & Vanessa</h1>
+                <p class="date">May 2, 2026 • Beirut, Lebanon</p>
+                
+                <div id="countdown" class="countdown-container">
+                    <div class="time-box"><span id="days">00</span><small>Days</small></div>
+                    <div class="time-box"><span id="hours">00</span><small>Hrs</small></div>
+                    <div class="time-box"><span id="minutes">00</span><small>Min</small></div>
+                    <div class="time-box"><span id="seconds">00</span><small>Sec</small></div>
+                </div>
+
+                <a href="#rsvp" class="rsvp-btn">RSVP Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp" class="rsvp-section">
+    <div class="container">
+        <h2>RSVP</h2>
+        <p>We can't wait to celebrate with you!</p>
+
+        <form id="weddingForm">
+            <div class="input-group">
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+            </div>
+
+            <div class="input-group">
+                <select id="attendance" name="attendance" required>
+                    <option value="" disabled selected>Will you attend?</option>
+                    <option value="yes">Joyfully Accept</option>
+                    <option value="no">Regretfully Decline</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <select id="method" name="method" required>
+                    <option value="email">Confirm via Email</option>
+                    <option value="whatsapp">Confirm via WhatsApp</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">Confirm Attendance</button>
+            <div id="formStatus"></div>
+        </form>
+    </div>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>

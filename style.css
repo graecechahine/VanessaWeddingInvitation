@@ -1,0 +1,136 @@
+/* General Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: "C:\Users\Y520\Desktop\Wedding invitation\PICVANYELIE.jpg" no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darken image for text readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    margin: 10px 0;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+.date {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Countdown Styling */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.time-box small {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+/* Button Styling */
+.rsvp-btn {
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rsvp-btn:hover {
+    background: #d4af37; /* Wedding Gold */
+    color: white;
+}
+.rsvp-section {
+    padding: 80px 20px;
+    background: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d4af37;
+}
+
+.hidden {
+    display: none;
+}
+
+#formStatus {
+    margin-top: 20px;
+    font-weight: bold;
+}
