@@ -10,7 +10,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: "C:\Users\Y520\Desktop\Wedding invitation\PICVANYELIE.jpg" no-repeat center center/cover;
+    background: 'PICVANYELIE.jpg' no-repeat center center/cover;
     position: relative;
 }
 
@@ -133,4 +133,5 @@ button:hover {
 #formStatus {
     margin-top: 20px;
     font-weight: bold;
+
 }
