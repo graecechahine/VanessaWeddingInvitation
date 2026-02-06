@@ -63,7 +63,7 @@ form.addEventListener('submit', async (e) => {
         submitBtn.innerText = "Sending Email...";
         
         try {
-            const response = await fetch('https://formspree.io/f/your-id-here', {
+            const response = await fetch('https://formspree.io/f/graecechahine1@gmail.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, attendance, message: "RSVP via Website" })
@@ -77,4 +77,5 @@ form.addEventListener('submit', async (e) => {
             statusDiv.innerHTML = "❌ Error sending email. Try WhatsApp instead!";
         }
     }
+
 });
