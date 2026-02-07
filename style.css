@@ -59,7 +59,7 @@ body {
     body {
         /* On mobile, 'fixed' attachment can sometimes cause glitches. 
            This ensures it stays smooth. */
-        background-attachment: scroll; 
+        background-attachment: 75% center; 
         
         /* Optional: If the couple is off-center in the photo, 
            change 50% to adjust horizontal focus */
@@ -187,6 +187,7 @@ button:hover {
     font-weight: bold;
 
 }
+
 
 
 
