@@ -50,7 +50,7 @@ body {
     height: 100vh;
     background-image: url('PICVANYELIE.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     background-size: cover; /* This is the 'magic' property for responsiveness */
     background-attachment: fixed;
     position: relative;
@@ -187,6 +187,7 @@ button:hover {
     font-weight: bold;
 
 }
+
 
 
 
