@@ -6,7 +6,45 @@ body {
     color: #fff;
     background-color: #f9f9f9;
 }
+.location-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
 
+.location-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 300px; /* Forces stack on small screens */
+    max-width: 450px;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-container {
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden; /* Rounds the corners of the iframe */
+}
+
+.map-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d4af37; /* Wedding Gold */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background: #b8962d;
+}
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -149,5 +187,6 @@ button:hover {
     font-weight: bold;
 
 }
+
 
 
