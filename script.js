@@ -37,7 +37,7 @@ updateCountdown(); // Call once immediately to avoid 00 display
 
 
 
-
+/*
 const form = document.getElementById('weddingForm');
 const statusDiv = document.getElementById('formStatus');
 
@@ -78,5 +78,52 @@ form.addEventListener('submit', async (e) => {
         }
     }
 
+});*/
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  
+  // Append Name, Attendance, and Timestamp
+  sheet.appendRow([new Date(), data.name, data.attendance]);
+  
+  return ContentService.createTextOutput(JSON.stringify({"result":"success"}))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+
+const form = document.getElementById('weddingForm');
+const GOOGLE_SCRIPT_URL = 'https://docs.google.com/spreadsheets/d/1-Pro0uzK78A9Tt0sRGrfu5YtVfGa3DUYgnqiRZQl0fA/edit?usp=sharing'; // Paste your URL here
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const attendance = document.getElementById('attendance').value;
+    const phone = document.getElementById('whatsappTarget').value
+
+    const attendanceText = attendance === 'yes' ? "Joyfully Accepts" : "Regretfully Declines";
+    const message = `Hi! This is ${name}. I am writing to RSVP. I ${attendanceText}.`;
+
+    // 1. Send data to Google Sheets
+    try {
+        // We use 'no-cors' mode for simple Apps Script triggers, 
+        // or a standard fetch if your script is set up for JSON.
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', 
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, attendance })
+        });
+    } catch (err) {
+        console.error("Sheet update failed", err);
+    }
+    // 2. Open WhatsApp immediately
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    document.getElementById('formStatus').innerHTML = "Recording response and opening WhatsApp...";
+
+    
 });
+
 
